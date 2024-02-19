@@ -1,0 +1,18 @@
+openai-service:
+  api-key: NOPE
+  gpt-model: gpt-3.5-turbo
+  http-client:
+    read-timeout: 3000
+    connect-timeout: 3000
+  urls:
+    base-url: https://api.openai.com/v1
+    chat-url: /chat/completions
+
+
+logging:
+  level:
+    com.github.wenqiglantz.service.openaiclient: TRACE
+
+spring:
+  jackson:
+    default-property-inclusion: NON_NULL
