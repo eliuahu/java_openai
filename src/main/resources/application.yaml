@@ -1,5 +1,5 @@
 openai-service:
-  api-key: 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
+  api-key:  None
   gpt-model: gpt-3.5-turbo
   http-client:
     read-timeout: 3000
