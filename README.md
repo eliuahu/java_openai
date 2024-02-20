@@ -13,6 +13,9 @@ curl --location 'http://localhost:8080/api/v1/chat' \
 --data '{"question":"Hello there?"}'
 '
 
+
+Spring boot integration of ChatGPT api
+
 # Output
 {
     "id": "chatcmpl-7GVV9uhSU82zoOr2GCWrIlb5dWaWZ",

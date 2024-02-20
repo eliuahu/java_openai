@@ -37,6 +37,7 @@ public class OpenAIClientConfig {
         return request -> request.header("Authorization", "Bearer " + apiKey);
     }
 
+    @SuppressWarnings("deprecation")
     @Bean
     public Request.Options options() {
         return new Request.Options(getConnectTimeOut(), getConnectTimeOut());
