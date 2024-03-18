@@ -15,7 +15,7 @@ import com.example.spring.boot.chatgpt.model.request.AssignSpecificationRequest;
 import com.example.spring.boot.chatgpt.model.response.ChatGPTResponse;
 import com.example.spring.boot.chatgpt.service.OpenAIClientService;
 
-import lombok.RequiredArgsConstructor;
+
 
 @RestController
 @RequestMapping("/api/v1")
