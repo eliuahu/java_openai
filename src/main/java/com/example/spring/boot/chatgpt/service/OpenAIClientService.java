@@ -72,7 +72,8 @@ public class OpenAIClientService {
                 .orElseThrow(() -> new EntityNotFoundException("ChatGPTResponseEntity not found with ID: " + chatGPTResponseId));
 
         List<SpecificationEntity> existingSpecifications = specificationRepository.findByDescriptionIn(descriptions);
-        Map<SpecificationDescription, SpecificationEntity> specificationMap = new HashMap<>();
+        EnumMap<SpecificationDescription, SpecificationEntity> specificationMap = new EnumMap<>(SpecificationDescription.class);
+
 
         for (SpecificationEntity specification : existingSpecifications) {
             specificationMap.putIfAbsent(specification.getDescription(), specification);
