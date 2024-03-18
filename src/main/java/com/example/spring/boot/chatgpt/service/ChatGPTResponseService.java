@@ -4,15 +4,17 @@ import com.example.spring.boot.chatgpt.model.entity.ChatGPTResponseEntity;
 import com.example.spring.boot.chatgpt.repository.ChatGPTResponseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ChatGPTResponseService {
+    private final ChatGPTResponseRepository chatGPTResponseRepository;
 
     @Autowired
-    private ChatGPTResponseRepository chatGPTResponseRepository;
+    public ChatGPTResponseService(ChatGPTResponseRepository chatGPTResponseRepository) {
+        this.chatGPTResponseRepository = chatGPTResponseRepository;
+    }
 
     public List<ChatGPTResponseEntity> findAll() {
         return chatGPTResponseRepository.findAll();

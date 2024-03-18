@@ -2,7 +2,7 @@ package com.example.spring.boot.chatgpt.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import java.util.Set;
+
 
 @Entity
 @Table(name = "source")

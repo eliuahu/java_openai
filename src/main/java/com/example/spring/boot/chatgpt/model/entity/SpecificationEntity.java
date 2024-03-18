@@ -1,7 +1,6 @@
 package com.example.spring.boot.chatgpt.model.entity;
 
 import com.example.spring.boot.chatgpt.model.entity.enums.SpecificationDescription;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
