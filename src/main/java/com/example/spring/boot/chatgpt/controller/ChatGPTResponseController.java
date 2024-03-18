@@ -4,16 +4,18 @@ import com.example.spring.boot.chatgpt.model.entity.ChatGPTResponseEntity;
 import com.example.spring.boot.chatgpt.service.ChatGPTResponseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/chat-gpt-responses")
 public class ChatGPTResponseController {
+    private final ChatGPTResponseService chatGPTResponseService;
 
     @Autowired
-    private ChatGPTResponseService chatGPTResponseService;
+    public ChatGPTResponseController(ChatGPTResponseService chatGPTResponseService) {
+        this.chatGPTResponseService = chatGPTResponseService;
+    }
 
     @GetMapping
     public List<ChatGPTResponseEntity> findAll() {
