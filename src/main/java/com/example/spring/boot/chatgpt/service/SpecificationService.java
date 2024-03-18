@@ -10,9 +10,12 @@ import java.util.Optional;
 
 @Service
 public class SpecificationService {
+    private final SpecificationRepository specificationRepository;
 
     @Autowired
-    private SpecificationRepository specificationRepository;
+    public SpecificationService(SpecificationRepository specificationRepository) {
+        this.specificationRepository = specificationRepository;
+    }
 
     public List<SpecificationEntity> findAll() {
         return specificationRepository.findAll();
