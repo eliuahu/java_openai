@@ -20,7 +20,7 @@ public class SourceController {
     }
 
     @PostMapping("/link/{chatGPTResponseId}")
-    public ResponseEntity<?> addSourcesToChatGPTResponse(@RequestBody List<SourceEntity> sources, @PathVariable String chatGPTResponseId) {
+    public ResponseEntity<Void> addSourcesToChatGPTResponse(@RequestBody List<SourceEntity> sources, @PathVariable String chatGPTResponseId) {
         sourceService.addSourcesToChatGPTResponse(chatGPTResponseId, sources);
         return ResponseEntity.ok().build();
     }

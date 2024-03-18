@@ -4,16 +4,18 @@ import com.example.spring.boot.chatgpt.model.entity.SpecificationEntity;
 import com.example.spring.boot.chatgpt.service.SpecificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/specifications")
 public class SpecificationController {
+    private final SpecificationService specificationService;
 
     @Autowired
-    private SpecificationService specificationService;
+    public SpecificationController(SpecificationService specificationService) {
+        this.specificationService = specificationService;
+    }
 
     @GetMapping("/all")
     public List<SpecificationEntity> findAll() {
